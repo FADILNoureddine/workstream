@@ -1,0 +1,20 @@
+server:
+  error:
+    include-stacktrace: on-param
+
+spring:
+  #  h2:
+  #    console:
+  #      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5433/notes
+    username: notes
+    password: Pass_24
+    driver-class-name: org.postgresql.Driver
+  #    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    #    database: MYSQL
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    show-sql: true
