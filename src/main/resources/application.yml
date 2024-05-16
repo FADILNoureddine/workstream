@@ -1,20 +1,19 @@
 server:
-  error:
-    include-stacktrace: on-param
+  port: 8082
 
 spring:
-  #  h2:
-  #    console:
-  #      enabled: true
   datasource:
-    url: jdbc:postgresql://localhost:5433/notes
-    username: notes
-    password: Pass_24
+    url: jdbc:postgresql://localhost:5433/note_db
+    username: note_hub
+    password: note_24
     driver-class-name: org.postgresql.Driver
-  #    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    #    database: MYSQL
-    database: POSTGRESQL
     hibernate:
-      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    database: POSTGRESQL
     show-sql: true
+
+
+
+
+

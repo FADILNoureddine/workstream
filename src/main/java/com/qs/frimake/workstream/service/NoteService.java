@@ -6,12 +6,27 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
 public class NoteService {
 
     private final NoteRepository noteRepository;
 
+    public NoteService(NoteRepository noteRepository) {
+        this.noteRepository = noteRepository;
+    }
+
     public Note create(Note note) {
+        return noteRepository.save(note);
+    }
+
+    public Note update(Note note) {
+        return noteRepository.save(note);
+    }
+
+    public Note delete(Note note) {
+        return noteRepository.save(note);
+    }
+
+    public Note find(Note note) {
         return noteRepository.save(note);
     }
 }
